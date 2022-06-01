@@ -1,0 +1,22 @@
+<section class="username">
+
+  <input
+  style="width: 36%"
+  type="text"
+  class="form-control"
+  (input)="onUpdateUserName($event)">
+
+
+  <button class="btn btn-primary" style="background-color: rgb(86, 6, 127)"
+  [disabled] = "!allowNewUsername"
+  (click)="onCreateUsername();">Add and Detele Username</button>
+
+  <button class="btn btn-primary" style="background-color: rgb(245, 32, 216)"
+    [disabled] ="!userName || !allowNewUsername"
+    (click)="onCreateUsername();">Add Username When Variable is Active</button>
+
+  <p class="test"> {{ usernameCreationStatus }} </p>
+
+</section>
+
+
